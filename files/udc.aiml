@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>I have no answer for that.</template>
+  </category>
+  
+  	<category>
+	    <pattern>hi</pattern>
+	    <template>
+	        <random>
+	            <li>hey, do you need career advice?
+	            <button><text>YES</text><postback>ChooseYES</postback></button></li>
+	            <li>hi, do you need career advice?
+	            <button><text>YES</text><postback>ChooseYES</postback></button></li>
+	            <li>hello, do you need career advice?
+	            <button><text>YES</text><postback>ChooseYES</postback></button></li>
+	        </random>
+	    </template>
+    </category>
+    
+    
+    
+    <category>
+        <pattern>ChooseYES</pattern>
+        <template>I'd be happy to! I'm going to ask you a couple of questions and then I will make a recommendation! Let's get started...
+        <button><text>OK</text><postback>ChooseOK</postback></button>
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern>ChooseOK</pattern>
+        <template>Are you good at math?
+        <button><text>YES</text><postback>mathYES</postback></button>
+        <button><text>NO</text><postback>mathNO</postback></button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>mathYES</pattern>
+        <template>Which interests you more?
+        <button><text>Privacy/Security</text><postback>cyberSecurity</postback></button>
+        <button><text>Machine Learning</text><postback>dataScience</postback></button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>cyberSecurity</pattern>
+        <template>I think I found something! You should look into a job involving CyberSecurity. Here is some more info...
+        <button><text>CyberSecurity</text>
+        <url>https://money.usnews.com/careers/best-jobs/information-security-analyst</url>
+        </button>
+        
+        </template>
+    </category>
+    
+    <category>
+        <pattern>dataScience</pattern>
+        <template>I think I found something! You should look into becoming a Data Scientist. Here's some more info...
+        <button><text>Data Science</text>
+        <url>https://money.usnews.com/careers/best-jobs/data-scientist</url>
+        </button>
+        
+        </template>
+    </category>
+    
+    <category>
+        <pattern>mathNO</pattern>
+        <template>Do you enjoy Programming?
+        <button><text>YES</text><postback>programmingYES</postback></button>
+        <button><text>NO</text><postback>programmingNO</postback></button>
+        </template>
+    </category>
+    
+   <category>
+       <pattern>programmingYES</pattern>
+       <template>That's great!!! I think you should look into Software Development. Here's some more information...
+       <button><text>Software Developer</text>
+       <url>https://money.usnews.com/careers/best-jobs/software-developer</url>
+       </button>
+       
+       </template>
+   </category>
+   
+   <category>
+       <pattern>programmingNO</pattern>
+       <template>OK, which one of these interests you more?
+       <button><text>Managing a team</text><postback>manageYES</postback></button>
+       <button><text>Creating/Maintaining a network for a business</text><postback>networkYES</postback></button>
+       </template>
+   </category>
+        
+    <category>
+        <pattern>manageYES</pattern>
+        <template>I think you should look into becoming an IT Project Manager!  Here's some more info...
+        <button><text>IT Project Manager</text>
+        <url>https://www.techtarget.com/searchcio/definition/IT-project-manager</url>
+        </button>
+        
+        </template>
+    </category>
+    
+    <category>
+        <pattern>networkYES</pattern>
+        <template>I think you should look into becoming a Network Engineer! Here is some additonal information...
+        <button><text>Network Engineer</text><url>https://www.techtarget.com/searchnetworking/definition/network-engineer</url>
+        
+        </button>
+        </template>
+    </category>
+    
+    
+    
+    
+</aiml>
